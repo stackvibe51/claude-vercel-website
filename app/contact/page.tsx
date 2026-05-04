@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
+import CalendlyButton from "@/components/CalendlyButton";
 
 export const metadata: Metadata = { title: "Contact — Book a Discovery Call" };
 
@@ -58,14 +58,9 @@ export default function ContactPage() {
               ))}
             </div>
             {/* Replace href with your Calendly link */}
-            <a
-              href="https://calendly.com/stackvibeai/discovery"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-10 py-4 rounded-xl bg-[#00BC9E] hover:bg-[#00956f] text-[#0A162A] font-bold text-base transition-all hover:scale-105"
-            >
+            <CalendlyButton className="px-10 py-4 rounded-xl bg-[#00BC9E] hover:bg-[#00956f] text-[#0A162A] font-bold text-base transition-all hover:scale-105 cursor-pointer">
               Book on Calendly →
-            </a>
+            </CalendlyButton>
             <p className="mt-4 text-xs text-slate-500">Or email us directly: hello@stackvibeai.com</p>
           </div>
         </AnimatedSection>

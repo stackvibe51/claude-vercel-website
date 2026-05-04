@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import CalendlyButton from "@/components/CalendlyButton";
 
 const offerings = [
   { label: "Agentic AI Transformation", href: "/offerings/agentic-ai-transformation", color: "text-teal-400" },
@@ -59,9 +60,9 @@ export default function Navbar() {
 
           <Link href="/blog"    className="text-sm text-slate-300 hover:text-white transition-colors">Insights</Link>
           <Link href="/contact" className="text-sm text-slate-300 hover:text-white transition-colors">Contact</Link>
-          <Link href="/contact#book" className="px-4 py-2 rounded-lg bg-[#00BC9E] hover:bg-[#00956f] text-sm font-semibold text-[#0A162A] transition-colors">
+          <CalendlyButton className="px-4 py-2 rounded-lg bg-[#00BC9E] hover:bg-[#00956f] text-sm font-semibold text-[#0A162A] transition-colors cursor-pointer">
             Book a Call
-          </Link>
+          </CalendlyButton>
         </div>
 
         {/* Mobile hamburger */}
@@ -89,7 +90,7 @@ export default function Navbar() {
               <hr className="border-white/10" />
               <Link href="/blog"    onClick={() => setMobileOpen(false)} className="block text-sm text-slate-300 py-1">Insights</Link>
               <Link href="/contact" onClick={() => setMobileOpen(false)} className="block text-sm text-slate-300 py-1">Contact</Link>
-              <Link href="/contact#book" onClick={() => setMobileOpen(false)} className="inline-block mt-2 px-4 py-2 rounded-lg bg-[#00BC9E] text-sm font-semibold text-[#0A162A]">Book a Call</Link>
+              <CalendlyButton className="mt-2 px-4 py-2 rounded-lg bg-[#00BC9E] text-sm font-semibold text-[#0A162A] cursor-pointer">Book a Call</CalendlyButton>
             </div>
           </motion.div>
         )}

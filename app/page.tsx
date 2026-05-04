@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import AnimatedSection from "@/components/AnimatedSection";
+import CalendlyButton from "@/components/CalendlyButton";
 
 export const metadata: Metadata = {
   title: "StackVibeAI — Agentic AI for the Enterprise",
@@ -238,10 +239,9 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact#book"
-              className="px-8 py-3.5 rounded-xl bg-[#00BC9E] hover:bg-[#00956f] text-[#0A162A] font-bold text-sm transition-all hover:scale-105 glow-teal">
+            <CalendlyButton className="px-8 py-3.5 rounded-xl bg-[#00BC9E] hover:bg-[#00956f] text-[#0A162A] font-bold text-sm transition-all hover:scale-105 glow-teal cursor-pointer">
               Book a Discovery Call →
-            </Link>
+            </CalendlyButton>
             <Link href="#offerings"
               className="px-8 py-3.5 rounded-xl glass hover:bg-white/10 text-sm font-medium transition-colors">
               See Our Offerings
@@ -432,10 +432,9 @@ export default function Home() {
               A structured diagnostic that maps your challenges, your systems, and your highest-value AI opportunities.
               No jargon. No obligation. Just clarity.
             </p>
-            <Link href="/contact#book"
-              className="inline-block px-8 py-3.5 rounded-xl bg-[#00BC9E] hover:bg-[#00956f] text-[#0A162A] font-bold text-sm transition-all hover:scale-105">
+            <CalendlyButton className="px-8 py-3.5 rounded-xl bg-[#00BC9E] hover:bg-[#00956f] text-[#0A162A] font-bold text-sm transition-all hover:scale-105 cursor-pointer">
               Book a Discovery Call →
-            </Link>
+            </CalendlyButton>
           </div>
         </section>
       </AnimatedSection>

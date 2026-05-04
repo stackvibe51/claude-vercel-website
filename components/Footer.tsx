@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CalendlyButton from "@/components/CalendlyButton";
 
 const offerings = [
   { label: "Agentic AI Transformation", href: "/offerings/agentic-ai-transformation" },
@@ -57,10 +58,9 @@ export default function Footer() {
           <h4 className="text-sm font-semibold text-white mb-4 tracking-wide">Get in Touch</h4>
           <p className="text-sm text-slate-400 mb-2">hello@stackvibeai.com</p>
           <p className="text-sm text-slate-400">UK · India · USA</p>
-          <Link href="/contact#book"
-            className="mt-5 inline-block px-4 py-2.5 rounded-lg bg-[#00BC9E] hover:bg-[#00956f] text-sm font-semibold text-[#0A162A] transition-colors">
+          <CalendlyButton className="mt-5 px-4 py-2.5 rounded-lg bg-[#00BC9E] hover:bg-[#00956f] text-sm font-semibold text-[#0A162A] transition-colors cursor-pointer">
             Book a Discovery Call →
-          </Link>
+          </CalendlyButton>
         </div>
       </div>
 

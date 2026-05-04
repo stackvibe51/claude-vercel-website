@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -23,10 +24,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${geist.variable} h-full`}>
+      <head>
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+      </head>
       <body className="min-h-full flex flex-col bg-[#0A162A] text-white antialiased">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
       </body>
     </html>
   );
