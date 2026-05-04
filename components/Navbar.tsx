@@ -27,10 +27,10 @@ export default function Navbar() {
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
       scrolled ? "bg-[#0A162A]/90 backdrop-blur-lg border-b border-white/[0.06]" : "bg-transparent"
     }`}>
-      <nav className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 h-32 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
-          <Image src="/logo/logo-light.png" alt="StackVibeAI" width={320} height={187} className="h-20 w-auto" priority />
+          <Image src="/logo/logo-light.png" alt="StackVibeAI" width={480} height={281} className="h-28 w-auto" priority />
         </Link>
 
         {/* Desktop nav */}
