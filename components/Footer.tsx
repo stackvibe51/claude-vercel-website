@@ -35,7 +35,7 @@ export default function Footer() {
           <ul className="space-y-2.5">
             {offerings.map((o) => (
               <li key={o.href}>
-                <Link href={o.href} className="text-sm text-slate-400 hover:text-[#00BC9E] transition-colors">{o.label}</Link>
+                <Link href={o.href} className="text-sm text-slate-400 hover:text-[#8B5CF6] transition-colors">{o.label}</Link>
               </li>
             ))}
           </ul>
@@ -47,7 +47,7 @@ export default function Footer() {
           <ul className="space-y-2.5">
             {[["Insights", "/blog"], ["Contact", "/contact"], ["Book a Discovery Call", "/contact#book"]].map(([label, href]) => (
               <li key={href}>
-                <Link href={href} className="text-sm text-slate-400 hover:text-[#00BC9E] transition-colors">{label}</Link>
+                <Link href={href} className="text-sm text-slate-400 hover:text-[#8B5CF6] transition-colors">{label}</Link>
               </li>
             ))}
           </ul>
@@ -58,7 +58,7 @@ export default function Footer() {
           <h4 className="text-sm font-semibold text-white mb-4 tracking-wide">Get in Touch</h4>
           <p className="text-sm text-slate-400 mb-2">hello@stackvibeai.com</p>
           <p className="text-sm text-slate-400">UK · India · USA</p>
-          <CalendlyButton className="mt-5 px-4 py-2.5 rounded-lg bg-[#00BC9E] hover:bg-[#00956f] text-sm font-semibold text-[#0A162A] transition-colors cursor-pointer">
+          <CalendlyButton className="mt-5 px-4 py-2.5 rounded-lg bg-[#8B5CF6] hover:bg-[#7C3AED] text-sm font-semibold text-[#0A162A] transition-colors cursor-pointer">
             Book a Discovery Call →
           </CalendlyButton>
         </div>

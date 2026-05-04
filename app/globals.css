@@ -25,10 +25,11 @@ body {
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-.glow-teal { box-shadow: 0 0 40px rgba(0,188,158,0.25); }
+.glow-teal   { box-shadow: 0 0 40px rgba(0,188,158,0.25); }
+.glow-purple { box-shadow: 0 0 40px rgba(139,92,246,0.35); }
 
 .gradient-text {
-  background: linear-gradient(135deg,#00BC9E 0%,#3B82F6 50%,#8B5CF6 100%);
+  background: linear-gradient(135deg,#3B82F6 0%,#8B5CF6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -37,6 +38,6 @@ body {
 ::-webkit-scrollbar       { width:6px; }
 ::-webkit-scrollbar-track { background:var(--navy); }
 ::-webkit-scrollbar-thumb { background:var(--navy2); border-radius:3px; }
-::-webkit-scrollbar-thumb:hover { background:var(--teal); }
+::-webkit-scrollbar-thumb:hover { background:var(--purple); }
 
 .prose { --tw-prose-invert-body:#CBD5E1; --tw-prose-invert-headings:#fff; }

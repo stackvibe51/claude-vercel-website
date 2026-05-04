@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import CalendlyButton from "@/components/CalendlyButton";
 
 const offerings = [
-  { label: "Agentic AI Transformation", href: "/offerings/agentic-ai-transformation", color: "text-teal-400" },
+  { label: "Agentic AI Transformation", href: "/offerings/agentic-ai-transformation", color: "text-purple-400" },
   { label: "Sovereign AI",              href: "/offerings/sovereign-ai",              color: "text-blue-400" },
   { label: "AI Agent Studio",           href: "/offerings/ai-agent-studio",           color: "text-purple-400" },
   { label: "AI-Native Engineering",     href: "/offerings/ai-native-engineering",     color: "text-amber-400" },
@@ -60,7 +60,7 @@ export default function Navbar() {
 
           <Link href="/blog"    className="text-sm text-slate-300 hover:text-white transition-colors">Insights</Link>
           <Link href="/contact" className="text-sm text-slate-300 hover:text-white transition-colors">Contact</Link>
-          <CalendlyButton className="px-4 py-2 rounded-lg bg-[#00BC9E] hover:bg-[#00956f] text-sm font-semibold text-[#0A162A] transition-colors cursor-pointer">
+          <CalendlyButton className="px-4 py-2 rounded-lg bg-[#8B5CF6] hover:bg-[#7C3AED] text-sm font-semibold text-[#0A162A] transition-colors cursor-pointer">
             Book a Call
           </CalendlyButton>
         </div>
@@ -90,7 +90,7 @@ export default function Navbar() {
               <hr className="border-white/10" />
               <Link href="/blog"    onClick={() => setMobileOpen(false)} className="block text-sm text-slate-300 py-1">Insights</Link>
               <Link href="/contact" onClick={() => setMobileOpen(false)} className="block text-sm text-slate-300 py-1">Contact</Link>
-              <CalendlyButton className="mt-2 px-4 py-2 rounded-lg bg-[#00BC9E] text-sm font-semibold text-[#0A162A] cursor-pointer">Book a Call</CalendlyButton>
+              <CalendlyButton className="mt-2 px-4 py-2 rounded-lg bg-[#8B5CF6] text-sm font-semibold text-[#0A162A] cursor-pointer">Book a Call</CalendlyButton>
             </div>
           </motion.div>
         )}

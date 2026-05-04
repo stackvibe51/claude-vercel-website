@@ -21,10 +21,10 @@ export default function AgenticAIPage() {
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(0,188,158,0.15)_0%,transparent_70%)] pointer-events-none" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <span className="inline-block px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 text-xs font-semibold tracking-widest uppercase mb-5">Offering 01</span>
+          <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold tracking-widest uppercase mb-5">Offering 01</span>
           <h1 className="text-5xl md:text-6xl font-bold mb-5">Agentic AI <span className="gradient-text">Transformation</span></h1>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-8">Make your existing stack intelligent — without ripping and replacing anything.</p>
-          <Link href="/contact#book" className="inline-block px-8 py-3.5 rounded-xl bg-[#00BC9E] hover:bg-[#00956f] text-[#0A162A] font-bold text-sm transition-all hover:scale-105 glow-teal">
+          <Link href="/contact#book" className="inline-block px-8 py-3.5 rounded-xl bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-bold text-sm transition-all hover:scale-105 glow-purple">
             Book a Discovery Call →
           </Link>
         </div>
@@ -44,8 +44,8 @@ export default function AgenticAIPage() {
               AI agents that read, write, and act across your entire stack to automate the workflows
               your team currently handles manually.
             </p>
-            <div className="glass rounded-xl p-4 border border-teal-500/20">
-              <p className="text-sm text-teal-300 font-semibold">Commercial Model</p>
+            <div className="glass rounded-xl p-4 border border-purple-500/20">
+              <p className="text-sm text-purple-300 font-semibold">Commercial Model</p>
               <p className="text-sm text-slate-400 mt-1">Scoped project engagement → monthly retainer for iteration & expansion</p>
             </div>
           </AnimatedSection>
@@ -63,7 +63,7 @@ export default function AgenticAIPage() {
           <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[{ v: "+30%", l: "Lead Activation" }, { v: "−40%", l: "SDR Manual Effort" }, { v: "+22%", l: "Meetings Generated" }, { v: "90d", l: "Avg. Payback" }].map((s) => (
               <div key={s.v}>
-                <div className="text-3xl font-black text-teal-400 mb-1">{s.v}</div>
+                <div className="text-3xl font-black text-purple-400 mb-1">{s.v}</div>
                 <div className="text-sm text-slate-400">{s.l}</div>
               </div>
             ))}
@@ -75,12 +75,12 @@ export default function AgenticAIPage() {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
           <AnimatedSection>
-            <div className="glass rounded-2xl p-8 border border-teal-500/20 h-full">
-              <h3 className="text-xl font-bold mb-6 text-teal-400">What We Deliver</h3>
+            <div className="glass rounded-2xl p-8 border border-purple-500/20 h-full">
+              <h3 className="text-xl font-bold mb-6 text-purple-400">What We Deliver</h3>
               <ul className="space-y-3">
                 {deliverables.map((d) => (
                   <li key={d} className="flex items-start gap-3 text-sm text-slate-300">
-                    <span className="text-teal-400 mt-0.5">✓</span> {d}
+                    <span className="text-purple-400 mt-0.5">✓</span> {d}
                   </li>
                 ))}
               </ul>
@@ -107,10 +107,10 @@ export default function AgenticAIPage() {
       {/* CTA */}
       <AnimatedSection>
         <section className="py-20 px-6">
-          <div className="max-w-2xl mx-auto text-center glass rounded-3xl p-10 border border-teal-500/20">
+          <div className="max-w-2xl mx-auto text-center glass rounded-3xl p-10 border border-purple-500/20">
             <h2 className="text-2xl font-bold mb-3">Ready to make your stack intelligent?</h2>
             <p className="text-slate-400 mb-7 text-sm">Start with a free 30-minute discovery call. We&apos;ll map your highest-value automation opportunity.</p>
-            <Link href="/contact#book" className="inline-block px-7 py-3 rounded-xl bg-[#00BC9E] hover:bg-[#00956f] text-[#0A162A] font-bold text-sm transition-all">Book a Discovery Call →</Link>
+            <Link href="/contact#book" className="inline-block px-7 py-3 rounded-xl bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-bold text-sm transition-all">Book a Discovery Call →</Link>
           </div>
         </section>
       </AnimatedSection>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const offerings = [
   {
-    num: "01", title: "Agentic AI Transformation", color: "#00BC9E", border: "border-teal-500/30",
+    num: "01", title: "Agentic AI Transformation", color: "#00BC9E", border: "border-purple-500/30",
     tagline: "Make your existing stack intelligent",
     desc: "AI orchestration layer built on top of your existing SaaS platforms — Salesforce, SAP, ServiceNow — turning siloed tools into connected, agent-driven workflows.",
     href: "/offerings/agentic-ai-transformation",
@@ -66,15 +66,15 @@ export default function Home() {
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden pt-32">
         {/* Radial background glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-5%,rgba(0,188,158,0.18)_0%,transparent_70%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-5%,rgba(139,92,246,0.18)_0%,transparent_70%)] pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_70%_80%,rgba(59,130,246,0.1)_0%,transparent_60%)] pointer-events-none" />
 
         {/* Grid lines */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none" />
 
         <div className="relative z-10 max-w-5xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-medium text-teal-300 mb-8 border border-teal-500/20">
-            <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-medium text-purple-300 mb-8 border border-purple-500/20">
+            <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
             Agentic AI for the Enterprise
           </div>
 
@@ -90,7 +90,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CalendlyButton className="px-8 py-3.5 rounded-xl bg-[#00BC9E] hover:bg-[#00956f] text-[#0A162A] font-bold text-sm transition-all hover:scale-105 glow-teal cursor-pointer">
+            <CalendlyButton className="px-8 py-3.5 rounded-xl bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-bold text-sm transition-all hover:scale-105 glow-purple cursor-pointer">
               Book a Discovery Call →
             </CalendlyButton>
             <Link href="#offerings"
@@ -129,7 +129,7 @@ export default function Home() {
 
             {/* Header */}
             <div className="text-center mb-16">
-              <span className="inline-block px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 text-xs font-semibold tracking-widest uppercase mb-4">Client Results</span>
+              <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold tracking-widest uppercase mb-4">Client Results</span>
               <h2 className="text-4xl md:text-5xl font-bold mb-5">Delivered. Not Just Advised.</h2>
               <p className="text-slate-400 max-w-xl mx-auto">Real transformations. Real outcomes. Here is what AI delivery actually looks like when someone owns the result alongside you.</p>
             </div>
@@ -195,22 +195,22 @@ export default function Home() {
                 {/* Tools */}
                 <div className="p-7">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-7 h-7 rounded-lg bg-teal-500/15 flex items-center justify-center">
-                      <svg className="w-4 h-4 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                    <div className="w-7 h-7 rounded-lg bg-purple-500/15 flex items-center justify-center">
+                      <svg className="w-4 h-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                     </div>
                     <h4 className="font-bold text-white text-sm">Tools Built &amp; Deployed</h4>
                   </div>
                   <ul className="space-y-3 text-sm text-slate-400">
                     <li className="flex gap-2">
-                      <span className="text-teal-400 shrink-0">⬡</span>
+                      <span className="text-purple-400 shrink-0">⬡</span>
                       <div><span className="text-white font-medium">Claude + Custom Org Plugin</span> — org-specific skills, coding standards, and domain knowledge baked into every interaction</div>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-teal-400 shrink-0">⬡</span>
+                      <span className="text-purple-400 shrink-0">⬡</span>
                       <div><span className="text-white font-medium">Bug Hunter</span> — custom AI tool that scans all repositories, understands bug context, produces root cause analysis and a prescriptive fix guide automatically</div>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-teal-400 shrink-0">⬡</span>
+                      <span className="text-purple-400 shrink-0">⬡</span>
                       <div><span className="text-white font-medium">GitHub + Asana Automation</span> — end-to-end task lifecycle managed without manual overhead</div>
                     </li>
                   </ul>
@@ -222,14 +222,14 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
               {/* Marketing Automation */}
-              <div className="glass rounded-2xl border border-teal-500/20 p-7">
-                <span className="text-xs font-semibold text-teal-400 tracking-widest uppercase">Case Study — Agentic AI Transformation</span>
+              <div className="glass rounded-2xl border border-purple-500/20 p-7">
+                <span className="text-xs font-semibold text-purple-400 tracking-widest uppercase">Case Study — Agentic AI Transformation</span>
                 <h3 className="text-xl font-bold text-white mt-2 mb-1">Marketing & Sales Agent Deployment</h3>
                 <p className="text-sm text-slate-400 mb-5">5-agent architecture deployed inside an existing CRM — no platform replacement, no disruption.</p>
                 <div className="grid grid-cols-3 gap-3 mb-5">
                   {[{v:"+30%",l:"Lead activation"},{v:"−40%",l:"SDR manual effort"},{v:"+22%",l:"Meetings booked"}].map(s=>(
                     <div key={s.l} className="text-center glass rounded-xl p-3">
-                      <div className="text-xl font-black text-teal-400">{s.v}</div>
+                      <div className="text-xl font-black text-purple-400">{s.v}</div>
                       <div className="text-xs text-slate-400 mt-0.5">{s.l}</div>
                     </div>
                   ))}
@@ -262,7 +262,7 @@ export default function Home() {
       <section id="offerings" className="py-24 px-6 bg-[#070F1E]/40">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-16">
-            <span className="inline-block px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 text-xs font-semibold tracking-widest uppercase mb-4">Our Offerings</span>
+            <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold tracking-widest uppercase mb-4">Our Offerings</span>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Four Ways We Deliver AI Value</h2>
             <p className="text-slate-400 max-w-xl mx-auto">Every engagement is scoped to your challenge. Every outcome is owned by us together.</p>
           </AnimatedSection>
@@ -292,7 +292,7 @@ export default function Home() {
       <AnimatedSection>
         <section className="py-20 px-6">
           <div className="max-w-5xl mx-auto text-center mb-12">
-            <span className="inline-block px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 text-xs font-semibold tracking-widest uppercase mb-4">How It Works</span>
+            <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold tracking-widest uppercase mb-4">How It Works</span>
             <h2 className="text-3xl font-bold mb-3">Agentic AI Architecture</h2>
             <p className="text-slate-400 max-w-xl mx-auto">Intelligent agents orchestrated across your existing stack — reading, reasoning, and acting in real time.</p>
           </div>
@@ -312,7 +312,7 @@ export default function Home() {
       <section className="py-24 px-6 bg-[#070F1E]/40">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-16">
-            <span className="inline-block px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 text-xs font-semibold tracking-widest uppercase mb-4">How We Work</span>
+            <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold tracking-widest uppercase mb-4">How We Work</span>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our 4-Phase Delivery Method</h2>
             <p className="text-slate-400 max-w-xl mx-auto">Every engagement begins with your data, your systems, your people.</p>
           </AnimatedSection>
@@ -337,7 +337,7 @@ export default function Home() {
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1">
-              <span className="inline-block px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 text-xs font-semibold tracking-widest uppercase mb-5">Live in Production</span>
+              <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold tracking-widest uppercase mb-5">Live in Production</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-5">Agents That Run Inside Your Existing Tools</h2>
               <p className="text-slate-400 mb-6 leading-relaxed">
                 We build AI agents that operate directly inside your CRM, ERP, and productivity tools —
@@ -346,11 +346,11 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-slate-300">
                 {["5-agent architecture deployed inside CRM", "+30% lead activation, −40% SDR manual effort", "+22% meetings generated", "Payback within 90 days of deployment"].map((item) => (
                   <li key={item} className="flex items-center gap-2">
-                    <span className="text-teal-400">✓</span> {item}
+                    <span className="text-purple-400">✓</span> {item}
                   </li>
                 ))}
               </ul>
-              <Link href="/offerings/agentic-ai-transformation" className="inline-flex items-center gap-2 mt-8 text-sm font-semibold text-[#00BC9E] hover:gap-3 transition-all">
+              <Link href="/offerings/agentic-ai-transformation" className="inline-flex items-center gap-2 mt-8 text-sm font-semibold text-[#8B5CF6] hover:gap-3 transition-all">
                 See Agentic AI Transformation <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
               </Link>
             </div>
@@ -368,18 +368,18 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="flex items-end justify-between mb-12">
             <div>
-              <span className="inline-block px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 text-xs font-semibold tracking-widest uppercase mb-4">Insights</span>
+              <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold tracking-widest uppercase mb-4">Insights</span>
               <h2 className="text-3xl md:text-4xl font-bold">AI Transformation Thinking</h2>
             </div>
-            <Link href="/blog" className="text-sm text-teal-400 hover:text-teal-300 font-medium hidden md:block">View all →</Link>
+            <Link href="/blog" className="text-sm text-purple-400 hover:text-purple-300 font-medium hidden md:block">View all →</Link>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {blogPreviews.map((post, i) => (
               <AnimatedSection key={post.slug} delay={i * 0.08}>
                 <Link href={`/blog/${post.slug}`} className="block glass rounded-2xl p-6 hover:bg-white/[0.07] transition-colors group">
-                  <span className="inline-block px-2.5 py-0.5 rounded-full bg-teal-500/10 text-teal-400 text-xs font-semibold mb-4">{post.tag}</span>
-                  <h3 className="font-semibold text-white leading-snug mb-3 group-hover:text-teal-300 transition-colors">{post.title}</h3>
+                  <span className="inline-block px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold mb-4">{post.tag}</span>
+                  <h3 className="font-semibold text-white leading-snug mb-3 group-hover:text-purple-300 transition-colors">{post.title}</h3>
                   <p className="text-xs text-slate-500">{post.date}</p>
                 </Link>
               </AnimatedSection>
@@ -391,16 +391,16 @@ export default function Home() {
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
       <AnimatedSection>
         <section className="py-24 px-6">
-          <div className="max-w-3xl mx-auto text-center glass rounded-3xl p-12 border border-teal-500/20 glow-teal">
-            <div className="w-12 h-12 rounded-2xl bg-teal-500/10 flex items-center justify-center mx-auto mb-6">
-              <svg className="w-6 h-6 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          <div className="max-w-3xl mx-auto text-center glass rounded-3xl p-12 border border-purple-500/20 glow-purple">
+            <div className="w-12 h-12 rounded-2xl bg-purple-500/10 flex items-center justify-center mx-auto mb-6">
+              <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Start With an AI Readiness Assessment</h2>
             <p className="text-slate-400 mb-8 leading-relaxed max-w-lg mx-auto">
               A structured diagnostic that maps your challenges, your systems, and your highest-value AI opportunities.
               No jargon. No obligation. Just clarity.
             </p>
-            <CalendlyButton className="px-8 py-3.5 rounded-xl bg-[#00BC9E] hover:bg-[#00956f] text-[#0A162A] font-bold text-sm transition-all hover:scale-105 cursor-pointer">
+            <CalendlyButton className="px-8 py-3.5 rounded-xl bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-bold text-sm transition-all hover:scale-105 cursor-pointer">
               Book a Discovery Call →
             </CalendlyButton>
           </div>
