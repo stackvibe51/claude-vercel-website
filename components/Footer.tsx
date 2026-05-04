@@ -14,8 +14,8 @@ export default function Footer() {
     <footer className="border-t border-white/[0.06] bg-[#070F1E]">
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Brand */}
-        <div className="md:col-span-1">
-          <Image src="/logo/logo-light.png" alt="StackVibeAI" width={200} height={117} className="h-12 w-auto mb-4" />
+        <div className="md:col-span-2">
+          <Image src="/logo/logo-light.png" alt="StackVibeAI" width={480} height={281} className="h-28 w-auto mb-4" />
           <p className="text-sm text-slate-400 leading-relaxed">
             Agentic AI for the Enterprise.<br />We don&apos;t just advise. We deliver.
           </p>
