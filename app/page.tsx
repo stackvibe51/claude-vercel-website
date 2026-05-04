@@ -59,155 +59,6 @@ const blogPreviews = [
   { slug: "4x-engineering-velocity", title: "How We Achieved 4× Engineering Velocity With a Custom AI SDLC", date: "April 2026", tag: "Engineering" },
 ];
 
-function AgenticArchitectureDiagram() {
-  return (
-    <div className="glass rounded-2xl p-6 md:p-10 overflow-x-auto">
-      <svg viewBox="0 0 900 420" className="w-full h-auto" xmlns="http://www.w3.org/2000/svg" aria-label="Agentic AI architecture diagram">
-        <defs>
-          <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#00BC9E" stopOpacity="1" />
-            <stop offset="100%" stopColor="#3B82F6" stopOpacity="1" />
-          </linearGradient>
-          <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#3B82F6" stopOpacity="1" />
-            <stop offset="100%" stopColor="#8B5CF6" stopOpacity="1" />
-          </linearGradient>
-          <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-            <path d="M0,0 L0,6 L8,3 z" fill="rgba(0,188,158,0.6)" />
-          </marker>
-          <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-            <path d="M0,0 L0,6 L8,3 z" fill="rgba(59,130,246,0.6)" />
-          </marker>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-        </defs>
-
-        {/* ── Background grid */}
-        <rect width="900" height="420" fill="transparent" />
-        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" strokeWidth="1"/>
-        </pattern>
-        <rect width="900" height="420" fill="url(#grid)" />
-
-        {/* ── COLUMN 1: Inputs ── */}
-        <text x="60" y="22" textAnchor="middle" fill="rgba(255,255,255,0.35)" fontSize="9" fontFamily="monospace" letterSpacing="2">INPUTS</text>
-
-        {/* User */}
-        <rect x="10" y="32" width="100" height="40" rx="8" fill="rgba(0,188,158,0.08)" stroke="rgba(0,188,158,0.3)" strokeWidth="1"/>
-        <text x="60" y="52" textAnchor="middle" fill="#00BC9E" fontSize="11" fontWeight="bold">Business User</text>
-        <text x="60" y="65" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9">Goals &amp; Tasks</text>
-
-        {/* Data Sources */}
-        <rect x="10" y="88" width="100" height="40" rx="8" fill="rgba(0,188,158,0.08)" stroke="rgba(0,188,158,0.3)" strokeWidth="1"/>
-        <text x="60" y="108" textAnchor="middle" fill="#00BC9E" fontSize="11" fontWeight="bold">Enterprise Data</text>
-        <text x="60" y="121" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9">CRM · ERP · Docs</text>
-
-        {/* Triggers */}
-        <rect x="10" y="144" width="100" height="40" rx="8" fill="rgba(0,188,158,0.08)" stroke="rgba(0,188,158,0.3)" strokeWidth="1"/>
-        <text x="60" y="164" textAnchor="middle" fill="#00BC9E" fontSize="11" fontWeight="bold">Event Triggers</text>
-        <text x="60" y="177" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9">Schedules · Webhooks</text>
-
-        {/* Input arrows */}
-        <line x1="110" y1="52" x2="188" y2="130" stroke="rgba(0,188,158,0.4)" strokeWidth="1" markerEnd="url(#arrow)" strokeDasharray="4,3"/>
-        <line x1="110" y1="108" x2="188" y2="130" stroke="rgba(0,188,158,0.4)" strokeWidth="1" markerEnd="url(#arrow)" strokeDasharray="4,3"/>
-        <line x1="110" y1="164" x2="188" y2="140" stroke="rgba(0,188,158,0.4)" strokeWidth="1" markerEnd="url(#arrow)" strokeDasharray="4,3"/>
-
-        {/* ── COLUMN 2: Orchestration ── */}
-        <text x="250" y="22" textAnchor="middle" fill="rgba(255,255,255,0.35)" fontSize="9" fontFamily="monospace" letterSpacing="2">ORCHESTRATION</text>
-
-        <rect x="188" y="90" width="124" height="80" rx="12" fill="rgba(0,188,158,0.12)" stroke="url(#tealGrad)" strokeWidth="1.5" filter="url(#glow)"/>
-        <text x="250" y="118" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">AI Orchestrator</text>
-        <text x="250" y="134" textAnchor="middle" fill="rgba(0,188,158,0.9)" fontSize="9">LangGraph · CrewAI</text>
-        <text x="250" y="150" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="9">Routing · Planning · Memory</text>
-
-        {/* Orchestrator → Agents */}
-        <line x1="312" y1="115" x2="388" y2="72" stroke="rgba(0,188,158,0.4)" strokeWidth="1" markerEnd="url(#arrow)"/>
-        <line x1="312" y1="130" x2="388" y2="130" stroke="rgba(0,188,158,0.4)" strokeWidth="1" markerEnd="url(#arrow)"/>
-        <line x1="312" y1="145" x2="388" y2="188" stroke="rgba(0,188,158,0.4)" strokeWidth="1" markerEnd="url(#arrow)"/>
-
-        {/* ── COLUMN 3: Agents ── */}
-        <text x="460" y="22" textAnchor="middle" fill="rgba(255,255,255,0.35)" fontSize="9" fontFamily="monospace" letterSpacing="2">AGENTS</text>
-
-        {/* Research Agent */}
-        <rect x="388" y="40" width="144" height="54" rx="10" fill="rgba(59,130,246,0.1)" stroke="rgba(59,130,246,0.35)" strokeWidth="1"/>
-        <text x="460" y="60" textAnchor="middle" fill="#60A5FA" fontSize="10" fontWeight="bold">Research Agent</text>
-        <text x="460" y="75" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="8.5">Retrieval · RAG · Web search</text>
-        <text x="460" y="87" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="8.5">Knowledge synthesis</text>
-
-        {/* Action Agent */}
-        <rect x="388" y="104" width="144" height="54" rx="10" fill="rgba(139,92,246,0.1)" stroke="rgba(139,92,246,0.35)" strokeWidth="1"/>
-        <text x="460" y="124" textAnchor="middle" fill="#A78BFA" fontSize="10" fontWeight="bold">Action Agent</text>
-        <text x="460" y="139" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="8.5">CRM writes · Email · Tickets</text>
-        <text x="460" y="151" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="8.5">API calls · Workflow triggers</text>
-
-        {/* Analysis Agent */}
-        <rect x="388" y="168" width="144" height="54" rx="10" fill="rgba(245,158,11,0.1)" stroke="rgba(245,158,11,0.35)" strokeWidth="1"/>
-        <text x="460" y="188" textAnchor="middle" fill="#FCD34D" fontSize="10" fontWeight="bold">Analysis Agent</text>
-        <text x="460" y="203" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="8.5">Reporting · Scoring · Insights</text>
-        <text x="460" y="215" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="8.5">Decision support</text>
-
-        {/* Agents → Tools */}
-        <line x1="532" y1="67" x2="608" y2="67" stroke="rgba(59,130,246,0.4)" strokeWidth="1" markerEnd="url(#arrowBlue)"/>
-        <line x1="532" y1="131" x2="608" y2="131" stroke="rgba(139,92,246,0.4)" strokeWidth="1" markerEnd="url(#arrowBlue)"/>
-        <line x1="532" y1="195" x2="608" y2="195" stroke="rgba(245,158,11,0.4)" strokeWidth="1" markerEnd="url(#arrowBlue)"/>
-
-        {/* ── COLUMN 4: Tools/Integrations ── */}
-        <text x="688" y="22" textAnchor="middle" fill="rgba(255,255,255,0.35)" fontSize="9" fontFamily="monospace" letterSpacing="2">INTEGRATIONS</text>
-
-        <rect x="608" y="40" width="160" height="40" rx="8" fill="rgba(59,130,246,0.07)" stroke="rgba(59,130,246,0.2)" strokeWidth="1"/>
-        <text x="688" y="57" textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize="9.5" fontWeight="600">Salesforce · HubSpot</text>
-        <text x="688" y="72" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="8.5">CRM &amp; Marketing Automation</text>
-
-        <rect x="608" y="104" width="160" height="40" rx="8" fill="rgba(139,92,246,0.07)" stroke="rgba(139,92,246,0.2)" strokeWidth="1"/>
-        <text x="688" y="121" textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize="9.5" fontWeight="600">SAP · ServiceNow · Jira</text>
-        <text x="688" y="136" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="8.5">ERP, ITSM &amp; Dev Ops</text>
-
-        <rect x="608" y="168" width="160" height="40" rx="8" fill="rgba(245,158,11,0.07)" stroke="rgba(245,158,11,0.2)" strokeWidth="1"/>
-        <text x="688" y="185" textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize="9.5" fontWeight="600">Pinecone · MongoDB · S3</text>
-        <text x="688" y="200" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="8.5">Vector DB &amp; Knowledge Stores</text>
-
-        {/* Tools → Output */}
-        <line x1="768" y1="60" x2="820" y2="110" stroke="rgba(0,188,158,0.3)" strokeWidth="1" markerEnd="url(#arrow)" strokeDasharray="4,3"/>
-        <line x1="768" y1="124" x2="820" y2="124" stroke="rgba(0,188,158,0.3)" strokeWidth="1" markerEnd="url(#arrow)" strokeDasharray="4,3"/>
-        <line x1="768" y1="188" x2="820" y2="138" stroke="rgba(0,188,158,0.3)" strokeWidth="1" markerEnd="url(#arrow)" strokeDasharray="4,3"/>
-
-        {/* ── COLUMN 5: Output ── */}
-        <text x="858" y="22" textAnchor="middle" fill="rgba(255,255,255,0.35)" fontSize="9" fontFamily="monospace" letterSpacing="2">OUTPUT</text>
-
-        <rect x="820" y="80" width="72" height="88" rx="10" fill="rgba(0,188,158,0.12)" stroke="url(#tealGrad)" strokeWidth="1.5" filter="url(#glow)"/>
-        <text x="856" y="106" textAnchor="middle" fill="white" fontSize="9.5" fontWeight="bold">Automated</text>
-        <text x="856" y="120" textAnchor="middle" fill="white" fontSize="9.5" fontWeight="bold">Outcomes</text>
-        <text x="856" y="138" textAnchor="middle" fill="rgba(0,188,158,0.9)" fontSize="8">Actions taken</text>
-        <text x="856" y="150" textAnchor="middle" fill="rgba(0,188,158,0.9)" fontSize="8">Reports sent</text>
-        <text x="856" y="162" textAnchor="middle" fill="rgba(0,188,158,0.9)" fontSize="8">Savings tracked</text>
-
-        {/* ── BOTTOM: Human-in-the-loop + Governance ── */}
-        <rect x="188" y="290" width="600" height="50" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" strokeWidth="1" strokeDasharray="6,4"/>
-        <text x="488" y="311" textAnchor="middle" fill="rgba(255,255,255,0.5)" fontSize="10" fontWeight="600">Human-in-the-Loop Controls  ·  Audit Trail  ·  Compliance &amp; Governance  ·  Explainable AI</text>
-        <text x="488" y="328" textAnchor="middle" fill="rgba(255,255,255,0.3)" fontSize="8.5">Every agent action is logged, reviewable, and reversible</text>
-
-        {/* Vertical connector lines down to governance bar */}
-        <line x1="250" y1="170" x2="250" y2="290" stroke="rgba(255,255,255,0.07)" strokeWidth="1" strokeDasharray="3,4"/>
-        <line x1="460" y1="222" x2="460" y2="290" stroke="rgba(255,255,255,0.07)" strokeWidth="1" strokeDasharray="3,4"/>
-        <line x1="688" y1="208" x2="688" y2="290" stroke="rgba(255,255,255,0.07)" strokeWidth="1" strokeDasharray="3,4"/>
-
-        {/* ── Bottom legend ── */}
-        <circle cx="210" cy="380" r="5" fill="rgba(0,188,158,0.7)"/>
-        <text x="220" y="384" fill="rgba(255,255,255,0.4)" fontSize="9">Orchestration</text>
-        <circle cx="310" cy="380" r="5" fill="rgba(59,130,246,0.7)"/>
-        <text x="320" y="384" fill="rgba(255,255,255,0.4)" fontSize="9">Agent Layer</text>
-        <circle cx="400" cy="380" r="5" fill="rgba(139,92,246,0.7)"/>
-        <text x="410" y="384" fill="rgba(255,255,255,0.4)" fontSize="9">Tool Integrations</text>
-        <circle cx="520" cy="380" r="5" fill="rgba(245,158,11,0.7)"/>
-        <text x="530" y="384" fill="rgba(255,255,255,0.4)" fontSize="9">Knowledge Stores</text>
-        <circle cx="640" cy="380" r="5" fill="rgba(0,188,158,0.7)"/>
-        <text x="650" y="384" fill="rgba(255,255,255,0.4)" fontSize="9">Automated Outcomes</text>
-      </svg>
-    </div>
-  );
-}
 
 export default function Home() {
   return (
@@ -334,8 +185,14 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-3">Agentic AI Architecture</h2>
             <p className="text-slate-400 max-w-xl mx-auto">Intelligent agents orchestrated across your existing stack — reading, reasoning, and acting in real time.</p>
           </div>
-          <div className="max-w-5xl mx-auto">
-            <AgenticArchitectureDiagram />
+          <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white/[0.06]">
+            <Image
+              src="/images/architecture.jpeg"
+              alt="Enterprise Agentic Architecture"
+              width={1600}
+              height={1049}
+              className="w-full h-auto"
+            />
           </div>
         </section>
       </AnimatedSection>
