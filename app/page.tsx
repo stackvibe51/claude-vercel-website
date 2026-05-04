@@ -64,7 +64,7 @@ export default function Home() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden pt-16">
+      <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden pt-24">
         {/* Radial background glow */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-5%,rgba(0,188,158,0.18)_0%,transparent_70%)] pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_70%_80%,rgba(59,130,246,0.1)_0%,transparent_60%)] pointer-events-none" />
