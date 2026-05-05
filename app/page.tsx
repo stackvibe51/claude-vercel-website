@@ -37,11 +37,11 @@ const offerings = [
 ];
 
 const steps = [
-  { num: "01", title: "AI Readiness Assessment", color: "#00BC9E", time: "8–12 weeks",
+  { num: "01", title: "AI Readiness Assessment", color: "#00BC9E", time: "~1 Week",
     desc: "Stakeholder workshops, use case discovery, process mapping, and AI opportunity scoring. Output: a prioritised AI opportunity map." },
-  { num: "02", title: "Tech Feasibility",        color: "#3B82F6", time: "3–4 weeks",
+  { num: "02", title: "Tech Feasibility",        color: "#3B82F6", time: "1–2 Weeks",
     desc: "Data readiness audit, architecture mapping, API surface review, and integration complexity scoring. Output: a technical blueprint." },
-  { num: "03", title: "Establish ROI",            color: "#8B5CF6", time: "2–3 weeks",
+  { num: "03", title: "Establish ROI",            color: "#8B5CF6", time: "1 Week",
     desc: "Business case per use case, cost-impact modelling, phased roadmap, and a board-ready investment brief." },
   { num: "04", title: "Deliver & Transform",      color: "#F59E0B", time: "Ongoing",
     desc: "Build agentic agents, deploy on your stack, measure savings, iterate and scale. We stay until outcomes are real." },
