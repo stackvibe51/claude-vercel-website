@@ -74,15 +74,13 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none" />
 
         <div className="relative z-10 max-w-5xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-medium text-purple-300 mb-8 border border-purple-500/20">
-            <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass text-sm font-semibold text-purple-300 mb-8 border border-purple-500/20">
+            <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
             Outcome-Driven Automation Company Powered by AI
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">
-            From Pilots to Production:
-            <br />
-            <span className="gradient-text">Deploy Enterprise AI Agents</span>
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 tracking-tight">
+            From Pilots to Production: <span className="gradient-text">Deploy Enterprise AI Agents</span>
           </h1>
 
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
