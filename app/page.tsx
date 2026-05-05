@@ -5,7 +5,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import CalendlyButton from "@/components/CalendlyButton";
 
 export const metadata: Metadata = {
-  title: "StackVibeAI — Agentic AI for the Enterprise",
+  title: "StackVibeAI — Outcome-Driven Automation Powered by AI",
+  description: "StackVibeAI is an outcome-driven automation company powered by AI. We deploy enterprise AI agents that actually replace manual work — production-ready, not just POCs.",
 };
 
 const offerings = [
@@ -75,18 +76,18 @@ export default function Home() {
         <div className="relative z-10 max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-medium text-purple-300 mb-8 border border-purple-500/20">
             <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
-            Agentic AI for the Enterprise
+            Outcome-Driven Automation Company Powered by AI
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">
             From Pilots to Production:
             <br />
-            <span className="gradient-text">Agentic AI for the Enterprise</span>
+            <span className="gradient-text">Deploy Enterprise AI Agents</span>
           </h1>
 
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            StackVibeAI builds, deploys, and owns AI outcomes for mid-market enterprises.
-            From agentic orchestration to sovereign on-prem AI — we make it real, in weeks.
+            Deploy enterprise AI agents that actually replace manual work —
+            production-ready, integrated into your existing stack, and live in weeks.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -118,6 +119,63 @@ export default function Home() {
                 <div className="text-xs text-slate-500">{s.sub}</div>
               </div>
             ))}
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* ── WHY STACKVIBEAI ──────────────────────────────────────────────── */}
+      <AnimatedSection>
+        <section className="py-20 px-6 bg-[#070F1E]/40">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold tracking-widest uppercase mb-4">Why StackVibeAI</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Built for Outcomes.<br />Not Just Deliverables.</h2>
+              <p className="text-slate-400 max-w-xl mx-auto">Most AI projects produce slide decks and prototypes. We produce agents that run in production and replace real manual work.</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+              {[
+                {
+                  icon: "🚀",
+                  title: "Production-Ready",
+                  sub: "Not POCs",
+                  desc: "Every engagement ends with a deployed, monitored agent in your environment — not a proof of concept handed over in a zip file.",
+                  color: "border-purple-500/30",
+                  badge: "bg-purple-500/10 text-purple-400",
+                },
+                {
+                  icon: "🔗",
+                  title: "Works With Your Stack",
+                  sub: "No rip-and-replace",
+                  desc: "We build on top of Salesforce, SAP, ServiceNow, Jira, and your existing tools. You don't change platforms — you make them intelligent.",
+                  color: "border-blue-500/30",
+                  badge: "bg-blue-500/10 text-blue-400",
+                },
+                {
+                  icon: "🔒",
+                  title: "Secure & Enterprise-Grade",
+                  sub: "Compliance first",
+                  desc: "Human-in-the-loop controls, full audit trails, data sovereignty options, and compliance-ready architecture docs as standard.",
+                  color: "border-amber-500/30",
+                  badge: "bg-amber-500/10 text-amber-400",
+                },
+                {
+                  icon: "⚡",
+                  title: "Faster Than Competitors",
+                  sub: "Weeks, not quarters",
+                  desc: "Our AI-native delivery model gets agents live in 4–8 weeks. No 6-month discovery phases. No endless workshops before a single line is written.",
+                  color: "border-purple-500/30",
+                  badge: "bg-purple-500/10 text-purple-400",
+                },
+              ].map((item) => (
+                <div key={item.title} className={`glass rounded-2xl p-6 border ${item.color} hover:bg-white/[0.07] transition-colors`}>
+                  <div className="text-3xl mb-4">{item.icon}</div>
+                  <div className={`inline-block px-2 py-0.5 rounded-full text-xs font-semibold mb-3 ${item.badge}`}>{item.sub}</div>
+                  <h3 className="font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </AnimatedSection>
