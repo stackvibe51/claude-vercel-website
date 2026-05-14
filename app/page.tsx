@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import AnimatedSection from "@/components/AnimatedSection";
 import CalendlyButton from "@/components/CalendlyButton";
+import HeroBackground from "@/components/HeroBackground";
 
 export const metadata: Metadata = {
   title: "StackVibeAI — Outcome-Driven Automation Powered by AI",
@@ -66,9 +67,8 @@ export default function Home() {
     <>
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden pt-32">
-        {/* Radial background glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-5%,rgba(139,92,246,0.18)_0%,transparent_70%)] pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_70%_80%,rgba(59,130,246,0.1)_0%,transparent_60%)] pointer-events-none" />
+        {/* Animated hero background */}
+        <HeroBackground />
 
         {/* Grid lines */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none" />
