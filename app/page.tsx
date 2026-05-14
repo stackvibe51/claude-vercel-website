@@ -444,6 +444,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Video ─────────────────────────────────────────────────────────── */}
+      <AnimatedSection>
+        <section className="py-20 px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold tracking-widest uppercase mb-4">See It In Action</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Watch What Agentic AI Delivery Looks Like</h2>
+            <p className="text-slate-400 mb-10 max-w-xl mx-auto">From requirement to production — see how StackVibeAI transforms teams, tools, and outcomes with real AI delivery.</p>
+            <div className="relative w-full aspect-video glass rounded-2xl overflow-hidden border border-purple-500/20 shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/r2qNf2myNDU"
+                title="StackVibeAI — Agentic AI Delivery"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
       <AnimatedSection>
         <section className="py-24 px-6">
