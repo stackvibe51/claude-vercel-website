@@ -453,7 +453,7 @@ export default function Home() {
             <p className="text-slate-400 mb-10 max-w-xl mx-auto">From requirement to production — see how StackVibeAI transforms teams, tools, and outcomes with real AI delivery.</p>
             <div className="relative w-full aspect-video glass rounded-2xl overflow-hidden border border-purple-500/20 shadow-2xl">
               <iframe
-                src="https://www.youtube.com/embed/r2qNf2myNDU"
+                src="https://www.youtube.com/embed/x26GxrI-hMI"
                 title="StackVibeAI — Agentic AI Delivery"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
