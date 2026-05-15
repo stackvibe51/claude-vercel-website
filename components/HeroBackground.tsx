@@ -1,76 +1,127 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+
+interface Particle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  radius: number;
+  opacity: number;
+}
+
 export default function HeroBackground() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let animId: number;
+    const particles: Particle[] = [];
+    const COUNT = 72;
+    const MAX_DIST = 160;
+
+    const resize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    // Seed particles
+    for (let i = 0; i < COUNT; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        radius: Math.random() * 1.8 + 0.8,
+        opacity: Math.random() * 0.5 + 0.3,
+      });
+    }
+
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Move particles
+      for (const p of particles) {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+      }
+
+      // Draw connecting lines
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < MAX_DIST) {
+            const alpha = (1 - dist / MAX_DIST) * 0.18;
+            const gradient = ctx.createLinearGradient(
+              particles[i].x, particles[i].y,
+              particles[j].x, particles[j].y
+            );
+            gradient.addColorStop(0, `rgba(139,92,246,${alpha})`);
+            gradient.addColorStop(1, `rgba(59,130,246,${alpha})`);
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = gradient;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Draw nodes
+      for (const p of particles) {
+        // Outer glow
+        const glow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius * 4);
+        glow.addColorStop(0, `rgba(139,92,246,${p.opacity * 0.4})`);
+        glow.addColorStop(1, "transparent");
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius * 4, 0, Math.PI * 2);
+        ctx.fillStyle = glow;
+        ctx.fill();
+
+        // Core dot
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(180,140,255,${p.opacity})`;
+        ctx.fill();
+      }
+
+      animId = requestAnimationFrame(draw);
+    };
+
+    draw();
+
+    return () => {
+      cancelAnimationFrame(animId);
+      window.removeEventListener("resize", resize);
+    };
+  }, []);
+
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
-
-      {/* Central glow source */}
-      <div
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full blur-[80px]"
-        style={{
-          width: 320,
-          height: 320,
-          background: "radial-gradient(circle, rgba(139,92,246,0.35) 0%, rgba(59,130,246,0.15) 50%, transparent 75%)",
-        }}
+      {/* Neural network canvas */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full opacity-70"
       />
 
-      {/* Radar ripple rings — 6 rings staggered */}
-      {[0, 1, 2, 3, 4, 5].map((i) => (
-        <div
-          key={i}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
-          style={{
-            width: 120,
-            height: 120,
-            border: "1px solid rgba(139,92,246,0.5)",
-            boxShadow: "0 0 12px rgba(139,92,246,0.15)",
-            animation: "radarRipple 5s cubic-bezier(0.2, 0.6, 0.4, 1) infinite",
-            animationDelay: `${i * 0.85}s`,
-          }}
-        />
-      ))}
+      {/* Soft gradient overlays for depth */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(139,92,246,0.12)_0%,transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_80%_80%,rgba(59,130,246,0.08)_0%,transparent_60%)]" />
 
-      {/* Subtle floating orb — top */}
-      <div
-        className="absolute rounded-full blur-[140px] opacity-25"
-        style={{
-          width: 600,
-          height: 600,
-          background: "radial-gradient(circle, #8B5CF6 0%, transparent 65%)",
-          top: "-10%",
-          left: "50%",
-          transform: "translateX(-50%)",
-          animation: "floatOrb 10s ease-in-out infinite",
-        }}
-      />
-
-      {/* Subtle floating orb — bottom left */}
-      <div
-        className="absolute rounded-full blur-[120px] opacity-15"
-        style={{
-          width: 400,
-          height: 400,
-          background: "radial-gradient(circle, #3B82F6 0%, transparent 65%)",
-          bottom: "0%",
-          left: "5%",
-          animation: "floatOrb 13s ease-in-out infinite reverse",
-        }}
-      />
-
-      {/* Grid lines */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.018)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.018)_1px,transparent_1px)] bg-[size:72px_72px]" />
-
-      <style>{`
-        @keyframes radarRipple {
-          0%   { transform: translate(-50%, -50%) scale(0.5);  opacity: 0.7; }
-          80%  { opacity: 0.05; }
-          100% { transform: translate(-50%, -50%) scale(8);    opacity: 0; }
-        }
-        @keyframes floatOrb {
-          0%, 100% { transform: translateX(-50%) translateY(0px)   scale(1); }
-          50%       { transform: translateX(-50%) translateY(-30px) scale(1.06); }
-        }
-      `}</style>
+      {/* Vignette — keeps edges dark so content pops */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_100%_at_50%_50%,transparent_40%,rgba(10,22,42,0.7)_100%)]" />
     </div>
   );
 }
